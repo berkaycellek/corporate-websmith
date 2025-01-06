@@ -14,6 +14,7 @@ const translations = {
     'nav.services': 'Services',
     'nav.portfolio': 'Portfolio',
     'nav.contact': 'Contact',
+    'nav.blog': 'Blog',
     'hero.badge': 'Professional Web Development',
     'hero.title': 'Creating Digital Experiences That Matter',
     'hero.subtitle': 'Transforming ideas into elegant, functional websites that drive results for businesses worldwide.',
@@ -57,12 +58,16 @@ const translations = {
     'footer.connect.title': 'Connect',
     'footer.connect.description': 'Ready to bring your digital dreams to life? Let\'s collaborate and create something amazing together.',
     'footer.rights': 'All rights reserved.',
+    'blog.badge': 'Latest Posts',
+    'blog.title': 'From Our Blog',
+    'blog.subtitle': 'Stay updated with our latest insights and developments in web technology',
   },
   tr: {
     'nav.about': 'Hakkımda',
     'nav.services': 'Hizmetler',
     'nav.portfolio': 'Portfolyo',
     'nav.contact': 'İletişim',
+    'nav.blog': 'Blog',
     'hero.badge': 'Profesyonel Web Geliştirme',
     'hero.title': 'Önem Taşıyan Dijital Deneyimler Yaratıyoruz',
     'hero.subtitle': 'Fikirleri dünya çapındaki işletmeler için sonuç getiren zarif ve işlevsel web sitelerine dönüştürüyoruz.',
@@ -106,6 +111,9 @@ const translations = {
     'footer.connect.title': 'Bağlantı',
     'footer.connect.description': 'Dijital hayallerinizi hayata geçirmeye hazır mısınız? Birlikte harika bir şeyler yaratalım.',
     'footer.rights': 'Tüm hakları saklıdır.',
+    'blog.badge': 'Son Yazılar',
+    'blog.title': 'Blogumuzdan',
+    'blog.subtitle': 'Web teknolojilerindeki son gelişmeler ve içgörülerimizle güncel kalın',
   }
 };
 
