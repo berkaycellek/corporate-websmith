@@ -89,6 +89,26 @@ export default {
             transform: "translate(0px, 0px) scale(1)",
           },
         },
+        wave0: {
+          "0%, 100%": { transform: "rotate(0deg) scale(1.5)" },
+          "50%": { transform: "rotate(3deg) scale(1.6)" },
+        },
+        wave1: {
+          "0%, 100%": { transform: "rotate(5deg) scale(1.5)" },
+          "50%": { transform: "rotate(8deg) scale(1.6)" },
+        },
+        wave2: {
+          "0%, 100%": { transform: "rotate(10deg) scale(1.5)" },
+          "50%": { transform: "rotate(13deg) scale(1.6)" },
+        },
+        wave3: {
+          "0%, 100%": { transform: "rotate(15deg) scale(1.5)" },
+          "50%": { transform: "rotate(18deg) scale(1.6)" },
+        },
+        wave4: {
+          "0%, 100%": { transform: "rotate(20deg) scale(1.5)" },
+          "50%": { transform: "rotate(23deg) scale(1.6)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -96,6 +116,11 @@ export default {
         fadeIn: "fadeIn 0.5s ease-out forwards",
         slideIn: "slideIn 0.5s ease-out forwards",
         blob: "blob 7s infinite",
+        wave0: "wave0 10s ease-in-out infinite",
+        wave1: "wave1 10s ease-in-out infinite",
+        wave2: "wave2 10s ease-in-out infinite",
+        wave3: "wave3 10s ease-in-out infinite",
+        wave4: "wave4 10s ease-in-out infinite",
       },
     },
   },

@@ -6,44 +6,32 @@ const Hero = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Dark wavy background with overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800">
-        <div className="absolute inset-0 opacity-30 mix-blend-overlay">
-          <svg
-            className="w-full h-full"
-            viewBox="0 0 1000 1000"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#0f172a" />
-                <stop offset="100%" stopColor="#1e293b" />
-              </linearGradient>
-            </defs>
-            <path
-              d="M0,500 C200,600 300,300 500,500 C700,700 800,400 1000,500 L1000,1000 L0,1000 Z"
-              fill="url(#gradient)"
-              opacity="0.3"
-            >
-              <animate
-                attributeName="d"
-                dur="20s"
-                repeatCount="indefinite"
-                values="
-                  M0,500 C200,600 300,300 500,500 C700,700 800,400 1000,500 L1000,1000 L0,1000 Z;
-                  M0,500 C200,400 300,700 500,500 C700,300 800,600 1000,500 L1000,1000 L0,1000 Z;
-                  M0,500 C200,600 300,300 500,500 C700,700 800,400 1000,500 L1000,1000 L0,1000 Z"
-              />
-            </path>
-          </svg>
+      {/* Dark background with wave patterns */}
+      <div className="absolute inset-0 bg-slate-950">
+        <div className="absolute inset-0 opacity-20">
+          {/* Wave patterns */}
+          {[...Array(5)].map((_, index) => (
+            <div
+              key={index}
+              className="absolute w-full h-[800px] transform"
+              style={{
+                top: `${index * 15}%`,
+                left: 0,
+                background: `linear-gradient(180deg, 
+                  rgba(30, 41, 59, 0) 0%,
+                  rgba(30, 41, 59, 0.2) 50%,
+                  rgba(30, 41, 59, 0) 100%)`,
+                transform: `rotate(${index * 5}deg) scale(1.5)`,
+                borderRadius: '50%',
+                filter: 'blur(50px)',
+                animation: `wave${index} 10s infinite ease-in-out`,
+              }}
+            />
+          ))}
         </div>
-      </div>
-      
-      {/* Animated gradient orbs with adjusted colors */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-400/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
-        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-teal-400/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
-        <div className="absolute bottom-1/4 left-1/2 w-96 h-96 bg-slate-400/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000" />
+        
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/50 via-slate-900/50 to-slate-800/50 backdrop-blur-sm" />
       </div>
 
       {/* Content */}
