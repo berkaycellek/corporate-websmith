@@ -7,19 +7,19 @@ const Services = () => {
       icon: Layout,
       title: "Web Design",
       description:
-        "Custom website designs that reflect your brand and engage your audience.",
+        "Crafting visually stunning and user-centric websites that perfectly capture your brand's essence and leave a lasting impression on visitors.",
     },
     {
       icon: Code,
       title: "Development",
       description:
-        "Clean, efficient code that brings your website to life with modern technologies.",
+        "Building robust, scalable web solutions using cutting-edge technologies and best practices to ensure optimal performance and maintainability.",
     },
     {
       icon: Smartphone,
       title: "Responsive Design",
       description:
-        "Websites that look and work perfectly on all devices and screen sizes.",
+        "Creating seamless experiences across all devices with fluid, adaptive layouts that maintain functionality and visual appeal from desktop to mobile.",
     },
   ];
 
@@ -34,7 +34,7 @@ const Services = () => {
             What I Can Do For You
           </h2>
           <p className="text-gray-600">
-            Comprehensive web development services tailored to your needs
+            Delivering exceptional web solutions that transform your digital presence and drive results
           </p>
         </div>
 
