@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Modern gradient background with overlay */}
@@ -17,21 +20,20 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-32 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <span className="inline-block px-4 py-1 mb-6 text-sm font-medium bg-white/10 backdrop-blur-sm dark:bg-white/5 rounded-full animate-fadeIn text-white">
-            Professional Web Development
+            {t('hero.badge')}
           </span>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fadeIn text-white" style={{ animationDelay: "0.2s" }}>
-            Creating Digital Experiences That Matter
+            {t('hero.title')}
           </h1>
           <p className="text-xl text-gray-200 dark:text-gray-300 mb-8 animate-fadeIn" style={{ animationDelay: "0.4s" }}>
-            Transforming ideas into elegant, functional websites that drive results
-            for businesses worldwide.
+            {t('hero.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fadeIn" style={{ animationDelay: "0.6s" }}>
             <Button size="lg" className="bg-white text-blue-950 hover:bg-gray-100 dark:bg-white/10 dark:text-white dark:hover:bg-white/20" asChild>
-              <a href="#portfolio">View Portfolio</a>
+              <a href="#portfolio">{t('hero.portfolio')}</a>
             </Button>
             <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10 dark:border-white/50 dark:hover:bg-white/10" asChild>
-              <a href="#contact">Get in Touch</a>
+              <a href="#contact">{t('hero.contact')}</a>
             </Button>
           </div>
         </div>
