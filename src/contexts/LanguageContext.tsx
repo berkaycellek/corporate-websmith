@@ -61,6 +61,10 @@ const translations = {
     'blog.badge': 'Latest Posts',
     'blog.title': 'From Our Blog',
     'blog.subtitle': 'Stay updated with our latest insights and developments in web technology',
+    'projects.badge': 'Our Projects',
+    'projects.title': 'Our Latest Projects',
+    'projects.subtitle': 'Check out our recently completed projects',
+    'projects.viewProject': 'View Project',
   },
   tr: {
     'nav.about': 'Hakkımda',
@@ -114,6 +118,10 @@ const translations = {
     'blog.badge': 'Son Yazılar',
     'blog.title': 'Blogumuzdan',
     'blog.subtitle': 'Web teknolojilerindeki son gelişmeler ve içgörülerimizle güncel kalın',
+    'projects.badge': 'Projelerimiz',
+    'projects.title': 'Son Projelerimiz',
+    'projects.subtitle': 'Başarıyla tamamladığımız son projelerimizi inceleyin',
+    'projects.viewProject': 'Projeyi İncele',
   }
 };
 
