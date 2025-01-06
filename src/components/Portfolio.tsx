@@ -57,14 +57,14 @@ const Portfolio = () => {
                 <p className="text-gray-200 mb-4">{item.description}</p>
                 <Button 
                   variant="outline" 
-                  className="text-white border-white/20 hover:bg-white/10 backdrop-blur-sm"
+                  className="text-white border-white/20 hover:bg-white/10 backdrop-blur-sm w-full"
                   asChild
                 >
                   <a 
                     href={item.link} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="flex items-center gap-2"
+                    className="flex items-center justify-center gap-2"
                   >
                     {t('portfolio.visitSite')} <ExternalLink className="w-4 h-4" />
                   </a>
