@@ -1,25 +1,25 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code, Layout, Smartphone } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Services = () => {
+  const { t } = useLanguage();
+
   const services = [
     {
       icon: Layout,
-      title: "Web Design",
-      description:
-        "Crafting visually stunning and user-centric websites that perfectly capture your brand's essence and leave a lasting impression on visitors.",
+      title: t('services.webdesign.title'),
+      description: t('services.webdesign.description'),
     },
     {
       icon: Code,
-      title: "Development",
-      description:
-        "Building robust, scalable web solutions using cutting-edge technologies and best practices to ensure optimal performance and maintainability.",
+      title: t('services.development.title'),
+      description: t('services.development.description'),
     },
     {
       icon: Smartphone,
-      title: "Responsive Design",
-      description:
-        "Creating seamless experiences across all devices with fluid, adaptive layouts that maintain functionality and visual appeal from desktop to mobile.",
+      title: t('services.responsive.title'),
+      description: t('services.responsive.description'),
     },
   ];
 
@@ -28,13 +28,13 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="inline-block px-4 py-1 mb-6 text-sm font-medium bg-gray-100 dark:bg-gray-800 dark:text-gray-200 rounded-full">
-            Services
+            {t('services.badge')}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 dark:text-white">
-            What I Can Do For You
+            {t('services.title')}
           </h2>
           <p className="text-gray-600 dark:text-gray-300">
-            Delivering exceptional web solutions that transform your digital presence and drive results
+            {t('services.subtitle')}
           </p>
         </div>
 

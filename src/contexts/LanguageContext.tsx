@@ -28,6 +28,15 @@ const translations = {
     'about.code.description': 'Writing maintainable, scalable code that stands the test of time.',
     'about.ux.title': 'User Experience',
     'about.ux.description': 'Focusing on creating seamless experiences that users love.',
+    'services.badge': 'Services',
+    'services.title': 'What I Can Do For You',
+    'services.subtitle': 'Delivering exceptional web solutions that transform your digital presence and drive results',
+    'services.webdesign.title': 'Web Design',
+    'services.webdesign.description': 'Crafting visually stunning and user-centric websites that perfectly capture your brand\'s essence and leave a lasting impression on visitors.',
+    'services.development.title': 'Development',
+    'services.development.description': 'Building robust, scalable web solutions using cutting-edge technologies and best practices to ensure optimal performance and maintainability.',
+    'services.responsive.title': 'Responsive Design',
+    'services.responsive.description': 'Creating seamless experiences across all devices with fluid, adaptive layouts that maintain functionality and visual appeal from desktop to mobile.',
   },
   tr: {
     'nav.about': 'Hakkımda',
@@ -48,6 +57,15 @@ const translations = {
     'about.code.description': 'Zamanın testinden geçen, sürdürülebilir ve ölçeklenebilir kod yazıyorum.',
     'about.ux.title': 'Kullanıcı Deneyimi',
     'about.ux.description': 'Kullanıcıların sevdiği kusursuz deneyimler yaratmaya odaklanıyorum.',
+    'services.badge': 'Hizmetler',
+    'services.title': 'Sizin İçin Neler Yapabilirim',
+    'services.subtitle': 'Dijital varlığınızı dönüştüren ve sonuç getiren olağanüstü web çözümleri sunuyoruz',
+    'services.webdesign.title': 'Web Tasarımı',
+    'services.webdesign.description': 'Markanızın özünü mükemmel şekilde yansıtan ve ziyaretçiler üzerinde kalıcı bir etki bırakan, görsel açıdan etkileyici ve kullanıcı odaklı web siteleri tasarlıyoruz.',
+    'services.development.title': 'Geliştirme',
+    'services.development.description': 'Optimal performans ve sürdürülebilirliği sağlamak için en son teknolojileri ve en iyi uygulamaları kullanarak sağlam, ölçeklenebilir web çözümleri oluşturuyoruz.',
+    'services.responsive.title': 'Duyarlı Tasarım',
+    'services.responsive.description': 'Masaüstünden mobile kadar işlevselliği ve görsel çekiciliği koruyan akıcı, uyarlanabilir düzenlerle tüm cihazlarda kusursuz deneyimler yaratıyoruz.',
   }
 };
 
