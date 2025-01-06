@@ -44,10 +44,6 @@ const Navbar = () => {
               <span className="text-foreground hover:text-primary transition-colors">{t('nav.portfolio')}</span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
             </a>
-            <a href="#projects" className="relative group">
-              <span className="text-foreground hover:text-primary transition-colors">Projelerimiz</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
-            </a>
             <a href="#blog" className="relative group">
               <span className="text-foreground hover:text-primary transition-colors">{t('nav.blog')}</span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
@@ -99,13 +95,6 @@ const Navbar = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('nav.portfolio')}
-              </a>
-              <a
-                href="#projects"
-                className="text-foreground hover:text-primary hover:bg-accent px-4 py-2 rounded-lg transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Projelerimiz
               </a>
               <a
                 href="#blog"
