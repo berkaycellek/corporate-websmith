@@ -41,7 +41,7 @@ const Navbar = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
             </a>
             <a href="#portfolio" className="relative group">
-              <span className="text-foreground hover:text-primary transition-colors">{t('nav.portfolio')}</span>
+              <span className="text-foreground hover:text-primary transition-colors">Projelerimiz</span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
             </a>
             <a href="#blog" className="relative group">
