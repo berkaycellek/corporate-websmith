@@ -6,44 +6,14 @@ const Hero = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Dark wavy background with overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800">
-        <div className="absolute inset-0 opacity-30 mix-blend-overlay">
-          <svg
-            className="w-full h-full"
-            viewBox="0 0 1000 1000"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#0f172a" />
-                <stop offset="100%" stopColor="#1e293b" />
-              </linearGradient>
-            </defs>
-            <path
-              d="M0,500 C200,600 300,300 500,500 C700,700 800,400 1000,500 L1000,1000 L0,1000 Z"
-              fill="url(#gradient)"
-              opacity="0.3"
-            >
-              <animate
-                attributeName="d"
-                dur="20s"
-                repeatCount="indefinite"
-                values="
-                  M0,500 C200,600 300,300 500,500 C700,700 800,400 1000,500 L1000,1000 L0,1000 Z;
-                  M0,500 C200,400 300,700 500,500 C700,300 800,600 1000,500 L1000,1000 L0,1000 Z;
-                  M0,500 C200,600 300,300 500,500 C700,700 800,400 1000,500 L1000,1000 L0,1000 Z"
-              />
-            </path>
-          </svg>
-        </div>
-      </div>
+      {/* Modern gradient background with overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-indigo-900 to-purple-900 dark:from-gray-900 dark:via-blue-950 dark:to-slate-900" />
       
-      {/* Animated gradient orbs with adjusted colors */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-400/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
-        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-teal-400/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
-        <div className="absolute bottom-1/4 left-1/2 w-96 h-96 bg-slate-400/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000" />
+      {/* Animated gradient orbs */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
+        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
+        <div className="absolute bottom-1/4 left-1/2 w-96 h-96 bg-indigo-400 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000" />
       </div>
 
       {/* Content */}
@@ -59,10 +29,10 @@ const Hero = () => {
             {t('hero.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fadeIn" style={{ animationDelay: "0.6s" }}>
-            <Button size="lg" className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white/20" asChild>
+            <Button size="lg" className="bg-white text-blue-950 hover:bg-gray-100 dark:bg-white/10 dark:text-white dark:hover:bg-white/20" asChild>
               <a href="#portfolio">{t('hero.portfolio')}</a>
             </Button>
-            <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm text-white border-white/20 hover:bg-white/20 dark:border-white/20 dark:hover:bg-white/20 shadow-lg" asChild>
+            <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white/20 dark:border-white dark:hover:bg-white/20 shadow-lg" asChild>
               <a href="#contact">{t('hero.contact')}</a>
             </Button>
           </div>
