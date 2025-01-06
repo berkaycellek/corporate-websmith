@@ -37,6 +37,11 @@ const translations = {
     'services.development.description': 'Building robust, scalable web solutions using cutting-edge technologies and best practices to ensure optimal performance and maintainability.',
     'services.responsive.title': 'Responsive Design',
     'services.responsive.description': 'Creating seamless experiences across all devices with fluid, adaptive layouts that maintain functionality and visual appeal from desktop to mobile.',
+    'portfolio.badge': 'Portfolio',
+    'portfolio.title': 'Featured Projects',
+    'portfolio.subtitle': 'Showcasing some of my best work in web development',
+    'portfolio.egepaslanmaz.description': 'My first client project - A corporate website for a stainless steel manufacturing company.',
+    'portfolio.visitSite': 'Visit Site',
   },
   tr: {
     'nav.about': 'Hakkımda',
@@ -66,6 +71,11 @@ const translations = {
     'services.development.description': 'Optimal performans ve sürdürülebilirliği sağlamak için en son teknolojileri ve en iyi uygulamaları kullanarak sağlam, ölçeklenebilir web çözümleri oluşturuyoruz.',
     'services.responsive.title': 'Duyarlı Tasarım',
     'services.responsive.description': 'Masaüstünden mobile kadar işlevselliği ve görsel çekiciliği koruyan akıcı, uyarlanabilir düzenlerle tüm cihazlarda kusursuz deneyimler yaratıyoruz.',
+    'portfolio.badge': 'Portfolyo',
+    'portfolio.title': 'Öne Çıkan Projeler',
+    'portfolio.subtitle': 'Web geliştirme alanındaki en iyi çalışmalarımdan bazıları',
+    'portfolio.egepaslanmaz.description': 'İlk müşteri projem - Paslanmaz çelik üretim şirketi için kurumsal web sitesi.',
+    'portfolio.visitSite': 'Siteyi Ziyaret Et',
   }
 };
 

@@ -1,12 +1,15 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Portfolio = () => {
+  const { t } = useLanguage();
+  
   const portfolioItems = [
     {
       title: "Ege Paslanmaz",
-      description: "My first client project - A corporate website for a stainless steel manufacturing company.",
+      description: t('portfolio.egepaslanmaz.description'),
       image: "/lovable-uploads/c1c1c7be-8289-4f5f-8e99-a34c6a76ee23.png",
       link: "https://egepaslanmaz.com",
     },
@@ -17,13 +20,13 @@ const Portfolio = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="inline-block px-4 py-1 mb-6 text-sm font-medium bg-gray-100 dark:bg-gray-800 dark:text-gray-200 rounded-full">
-            Portfolio
+            {t('portfolio.badge')}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 dark:text-white">
-            Featured Projects
+            {t('portfolio.title')}
           </h2>
           <p className="text-gray-600 dark:text-gray-300">
-            Showcasing some of my best work in web development
+            {t('portfolio.subtitle')}
           </p>
         </div>
 
@@ -44,7 +47,7 @@ const Portfolio = () => {
                 <p className="text-gray-600 dark:text-gray-300 mb-4">{item.description}</p>
                 <Button asChild variant="outline" className="dark:text-gray-300 dark:hover:text-white">
                   <a href={item.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                    Visit Site <ExternalLink className="w-4 h-4" />
+                    {t('portfolio.visitSite')} <ExternalLink className="w-4 h-4" />
                   </a>
                 </Button>
               </CardContent>
