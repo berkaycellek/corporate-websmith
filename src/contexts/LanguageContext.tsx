@@ -70,7 +70,7 @@ const translations = {
     'hero.contact': 'İletişime Geç',
     'about.badge': 'Hakkımda',
     'about.title': 'Güzel Dijital Çözümler Yaratmaya Tutkulu',
-    'about.description': 'Web geliştirme alanındaki yılların deneyimiyle, işletmelerin çevrimiçi varlıklarını büyütmelerine yardımcı olan modern, duyarlı web siteleri oluşturmada uzmanım.',
+    'about.description': 'İşletmelerin çevrimiçi varlıklarını büyütmelerine yardımcı olan modern, duyarlı web siteleri oluşturmada uzmanım.',
     'about.modern.title': 'Modern Tasarım',
     'about.modern.description': 'Kullanıcıları cezbeden ve sonuç getiren güzel, sezgisel arayüzler oluşturuyorum.',
     'about.code.title': 'Temiz Kod',
