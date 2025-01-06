@@ -26,7 +26,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <a href="#" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-black bg-clip-text text-transparent hover:from-blue-500 hover:to-gray-800 transition-all duration-300">
+          <a href="#" className="text-2xl font-bold text-primary hover:text-primary/80 transition-all duration-300">
             Berkay Cellek
           </a>
 
