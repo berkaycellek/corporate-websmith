@@ -3,6 +3,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import Navbar from "@/components/Navbar";
 
 const BlogDetail = () => {
   const { id } = useParams();
@@ -87,51 +88,57 @@ const BlogDetail = () => {
 
   if (!post) {
     return (
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-2xl font-bold text-center">
-          {language === 'en' ? 'Blog post not found' : 'Blog yazısı bulunamadı'}
-        </h1>
-      </div>
+      <>
+        <Navbar />
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-2xl font-bold text-center">
+            {language === 'en' ? 'Blog post not found' : 'Blog yazısı bulunamadı'}
+          </h1>
+        </div>
+      </>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-20">
-      <div className="container mx-auto px-4">
-        <Button
-          variant="ghost"
-          className="mb-6"
-          onClick={() => navigate(-1)}
-        >
-          <ArrowLeft className="mr-2" />
-          {language === 'en' ? 'Back' : 'Geri Dön'}
-        </Button>
-        <Card className="max-w-4xl mx-auto overflow-hidden border-0 bg-white dark:bg-gray-800">
-          <div className="aspect-video w-full overflow-hidden">
-            <img
-              src={post.image}
-              alt={post.title}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <CardContent className="p-8">
-            <div className="mb-6">
-              <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-                {new Date(post.date).toLocaleDateString(language === 'en' ? 'en-US' : 'tr-TR')}
+    <>
+      <Navbar />
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-20">
+        <div className="container mx-auto px-4">
+          <Button
+            variant="ghost"
+            className="mb-6"
+            onClick={() => navigate(-1)}
+          >
+            <ArrowLeft className="mr-2" />
+            {language === 'en' ? 'Back' : 'Geri Dön'}
+          </Button>
+          <Card className="max-w-4xl mx-auto overflow-hidden border-0 bg-white dark:bg-gray-800">
+            <div className="aspect-video w-full overflow-hidden">
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <CardContent className="p-8">
+              <div className="mb-6">
+                <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+                  {new Date(post.date).toLocaleDateString(language === 'en' ? 'en-US' : 'tr-TR')}
+                </div>
+                <h1 className="text-3xl font-bold mb-4 dark:text-white">{post.title}</h1>
               </div>
-              <h1 className="text-3xl font-bold mb-4 dark:text-white">{post.title}</h1>
-            </div>
-            <div className="prose dark:prose-invert max-w-none">
-              {post.content.split('\n\n').map((paragraph, index) => (
-                <p key={index} className="text-gray-600 dark:text-gray-300 mb-4">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
+              <div className="prose dark:prose-invert max-w-none">
+                {post.content.split('\n\n').map((paragraph, index) => (
+                  <p key={index} className="text-gray-600 dark:text-gray-300 mb-4">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
