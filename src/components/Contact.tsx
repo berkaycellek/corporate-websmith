@@ -3,11 +3,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
-import { Mail, Send, MessageSquare } from "lucide-react";
+import { Mail, Send, MessageSquare, Share2 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -22,6 +22,23 @@ const Contact = () => {
       description: t('contact.toast.description'),
     });
     setFormData({ name: "", email: "", message: "" });
+  };
+
+  const handleShare = (platform: string) => {
+    const url = window.location.href;
+    const text = language === 'en' ? 'Check out this awesome website!' : 'Bu harika websitesine göz atın!';
+    
+    switch (platform) {
+      case 'twitter':
+        window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        break;
+      case 'facebook':
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        break;
+      case 'linkedin':
+        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+        break;
+    }
   };
 
   return (
@@ -93,6 +110,39 @@ const Contact = () => {
                 <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </form>
+
+            {/* Share Section */}
+            <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+              <div className="text-center">
+                <h3 className="text-lg font-semibold mb-4 flex items-center justify-center gap-2">
+                  <Share2 className="w-5 h-5" />
+                  {language === 'en' ? 'Share This Page' : 'Bu Sayfayı Paylaş'}
+                </h3>
+                <div className="flex justify-center gap-4">
+                  <Button
+                    variant="outline"
+                    onClick={() => handleShare('twitter')}
+                    className="hover:bg-blue-50 dark:hover:bg-blue-900"
+                  >
+                    Twitter
+                  </Button>
+                  <Button
+                    variant="outline"
+                    onClick={() => handleShare('facebook')}
+                    className="hover:bg-blue-50 dark:hover:bg-blue-900"
+                  >
+                    Facebook
+                  </Button>
+                  <Button
+                    variant="outline"
+                    onClick={() => handleShare('linkedin')}
+                    className="hover:bg-blue-50 dark:hover:bg-blue-900"
+                  >
+                    LinkedIn
+                  </Button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
