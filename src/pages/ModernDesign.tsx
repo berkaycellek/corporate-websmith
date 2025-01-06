@@ -34,13 +34,31 @@ const ModernDesign = () => {
           <div className="prose dark:prose-invert max-w-none">
             <p className="text-gray-600 dark:text-gray-300 mb-4">
               Modern web tasarımında sadelik ve işlevsellik ön plandadır. Kullanıcı deneyimini
-              en üst düzeye çıkarmak için temiz ve anlaşılır arayüzler tasarlıyoruz.
+              en üst düzeye çıkarmak için temiz ve anlaşılır arayüzler tasarlıyoruz. Her projede,
+              en son teknolojileri ve tasarım trendlerini kullanarak, markanızın dijital varlığını
+              güçlendiriyoruz.
             </p>
             
             <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Tasarım sürecimiz, kullanıcı odaklı araştırma ile başlar ve sürekli geri bildirimlerle
+              şekillenir. Responsive tasarım prensiplerini benimseyerek, her cihazda mükemmel görünen
+              ve çalışan web siteleri oluşturuyoruz. Minimalist yaklaşımımız, içeriğin ön planda
+              olmasını sağlarken, modern animasyonlar ve geçişler ile kullanıcı deneyimini
+              zenginleştiriyoruz.
+            </p>
+
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
               Her projede, markanızın kimliğini yansıtan özgün tasarımlar oluşturuyoruz.
               Güncel tasarım trendlerini takip ederek, zamansız ve etkileyici web siteleri
-              geliştiriyoruz.
+              geliştiriyoruz. Tipografi seçiminden renk paletine, grid sisteminden beyaz alan
+              kullanımına kadar her detayı özenle planlıyoruz.
+            </p>
+
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Sürdürülebilir tasarım yaklaşımımız, projenizin uzun vadede başarılı olmasını
+              sağlar. SEO dostu yapı, hızlı yükleme süreleri ve kolay bakım yapılabilirlik
+              gibi teknik detayları da göz önünde bulundurarak, hem estetik hem de fonksiyonel
+              çözümler sunuyoruz.
             </p>
           </div>
         </div>
