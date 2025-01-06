@@ -22,26 +22,26 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <a href="#" className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent hover:from-purple-500 hover:to-pink-500 transition-all duration-300">
+          <a href="#" className="text-2xl font-bold bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent hover:from-black hover:to-gray-700 transition-all duration-300">
             Berkay Cellek
           </a>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             <a href="#about" className="relative group">
-              <span className="text-gray-700 hover:text-gray-900 transition-colors">About</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300"></span>
+              <span className="text-gray-800 hover:text-black transition-colors">About</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300"></span>
             </a>
             <a href="#services" className="relative group">
-              <span className="text-gray-700 hover:text-gray-900 transition-colors">Services</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300"></span>
+              <span className="text-gray-800 hover:text-black transition-colors">Services</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300"></span>
             </a>
             <a href="#portfolio" className="relative group">
-              <span className="text-gray-700 hover:text-gray-900 transition-colors">Portfolio</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300"></span>
+              <span className="text-gray-800 hover:text-black transition-colors">Portfolio</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300"></span>
             </a>
             <Button
-              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-black hover:bg-gray-900 text-white shadow-lg hover:shadow-xl transition-all duration-300"
               asChild
             >
               <a href="#contact">Contact</a>
@@ -63,21 +63,21 @@ const Navbar = () => {
             <div className="flex flex-col space-y-4">
               <a
                 href="#about"
-                className="text-gray-700 hover:text-gray-900 hover:bg-gray-50 px-4 py-2 rounded-lg transition-colors"
+                className="text-gray-800 hover:text-black hover:bg-gray-50 px-4 py-2 rounded-lg transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 About
               </a>
               <a
                 href="#services"
-                className="text-gray-700 hover:text-gray-900 hover:bg-gray-50 px-4 py-2 rounded-lg transition-colors"
+                className="text-gray-800 hover:text-black hover:bg-gray-50 px-4 py-2 rounded-lg transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Services
               </a>
               <a
                 href="#portfolio"
-                className="text-gray-700 hover:text-gray-900 hover:bg-gray-50 px-4 py-2 rounded-lg transition-colors"
+                className="text-gray-800 hover:text-black hover:bg-gray-50 px-4 py-2 rounded-lg transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Portfolio
@@ -85,7 +85,7 @@ const Navbar = () => {
               <div className="px-4">
                 <Button
                   asChild
-                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="w-full bg-black hover:bg-gray-900 text-white shadow-lg hover:shadow-xl transition-all duration-300"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <a href="#contact">Contact</a>
