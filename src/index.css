@@ -56,15 +56,63 @@
   body {
     @apply bg-background text-foreground antialiased;
     background: linear-gradient(
-      to bottom right,
-      hsl(220, 30%, 10%),
-      hsl(220, 30%, 8%)
+      135deg,
+      hsl(200, 30%, 6%),
+      hsl(200, 30%, 12%)
     );
-    background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%23111827'/%3E%3Cstop offset='1' stop-color='%231E293B'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='540' height='450' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.05'%3E%3Cpath fill='%23444' d='M90 150L0 300h180z'/%3E%3Cpath d='M90 150L180 0H0z'/%3E%3Cpath fill='%23AAA' d='M270 150L360 0H180z'/%3E%3Cpath fill='%23DDD' d='M450 150L360 300h180z'/%3E%3Cpath fill='%23999' d='M450 150L540 0H360z'/%3E%3Cpath d='M630 150L540 300h180z'/%3E%3Cpath fill='%23DDD' d='M630 150L720 0H540z'/%3E%3Cpath fill='%23444' d='M810 150L720 300h180z'/%3E%3Cpath fill='%23FFF' d='M810 150L900 0H720z'/%3E%3Cpath fill='%23DDD' d='M990 150L900 300h180z'/%3E%3Cpath fill='%23444' d='M990 150L1080 0H900z'/%3E%3Cpath fill='%23DDD' d='M90 450L0 600h180z'/%3E%3Cpath d='M90 450L180 300H0z'/%3E%3Cpath fill='%23666' d='M270 450L180 600h180z'/%3E%3Cpath fill='%23AAA' d='M270 450L360 300H180z'/%3E%3Cpath fill='%23DDD' d='M450 450L360 600h180z'/%3E%3Cpath fill='%23999' d='M450 450L540 300H360z'/%3E%3Cpath fill='%23999' d='M630 450L540 600h180z'/%3E%3Cpath fill='%23FFF' d='M630 450L720 300H540z'/%3E%3Cpath fill='%23DDD' d='M810 450L720 600h180z'/%3E%3Cpath fill='%23AAA' d='M810 450L900 300H720z'/%3E%3Cpath fill='%23666' d='M990 450L900 600h180z'/%3E%3Cpath fill='%23999' d='M990 450L1080 300H900z'/%3E%3Cpath fill='%23999' d='M90 750L0 900h180z'/%3E%3Cpath d='M270 750L180 900h180z'/%3E%3Cpath fill='%23DDD' d='M270 750L360 600H180z'/%3E%3Cpath d='M450 750L540 600H360z'/%3E%3Cpath d='M630 750L540 900h180z'/%3E%3Cpath fill='%23666' d='M630 750L720 600H540z'/%3E%3Cpath fill='%23AAA' d='M810 750L720 900h180z'/%3E%3Cpath fill='%23666' d='M810 750L900 600H720z'/%3E%3Cpath fill='%23999' d='M990 750L900 900h180zM990 750L1080 600H900z'/%3E%3Cpath d='M90 750L180 600H0z'/%3E%3Cpath d='M270 750L360 600H180z'/%3E%3Cpath fill='%23DDD' d='M450 750L360 900h180z'/%3E%3Cpath fill='%23666' d='M450 750L540 600H360z'/%3E%3Cpath fill='%23999' d='M630 750L720 600H540z'/%3E%3Cpath fill='%23BBB' d='M810 750L900 600H720z'/%3E%3Cpath fill='%23666' d='M990 750L1080 600H900z'/%3E%3Cpath fill='%23666' d='M90 750L180 600H0z'/%3E%3Cpath d='M270 750L360 600H180z'/%3E%3Cpath fill='%23666' d='M450 750L540 600H360z'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
-    background-attachment: fixed;
-    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.12'/%3E%3C/svg%3E");
+    opacity: 0.15;
+    z-index: 0;
+    pointer-events: none;
+  }
+  body::after {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background: radial-gradient(
+      circle at center,
+      transparent 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(123, 180, 200, 0.03) 0%,
+      rgba(123, 180, 200, 0.03) 2%,
+      transparent 2%,
+      transparent 4%
+    );
+    transform: rotate(0deg);
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.4;
+    animation: waveAnimation 15s infinite linear;
+  }
+  @keyframes waveAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
   html {
     scroll-behavior: smooth;
+  }
+  #root {
+    position: relative;
+    z-index: 2;
   }
 }
