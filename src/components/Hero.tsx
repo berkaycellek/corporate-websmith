@@ -6,7 +6,7 @@ const Hero = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Dark smoky background with waves */}
+      {/* Modern wave patterns background */}
       <div className="absolute inset-0 bg-slate-950">
         {/* Animated wave patterns */}
         <div className="absolute inset-0">
@@ -18,42 +18,42 @@ const Hero = () => {
                 height: '200%',
                 top: `${index * -15}%`,
                 background: `linear-gradient(180deg, 
-                  rgba(45, 212, 191, 0) 0%,
-                  rgba(45, 212, 191, ${0.02 + index * 0.01}) 45%,
-                  rgba(45, 212, 191, 0) 100%)`,
+                  rgba(59, 130, 246, 0) 0%,
+                  rgba(59, 130, 246, ${0.03 + index * 0.01}) 45%,
+                  rgba(59, 130, 246, 0) 100%)`,
                 transform: `rotate(${index * 3}deg) scale(1.5)`,
                 transformOrigin: 'center',
                 animation: `wave${index} ${15 + index * 2}s infinite ease-in-out`,
-                opacity: 0.5,
+                opacity: 0.7,
                 borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%',
               }}
             />
           ))}
         </div>
 
-        {/* Smoky overlay elements */}
+        {/* Additional decorative elements */}
         <div className="absolute inset-0">
-          {[...Array(4)].map((_, index) => (
+          {[...Array(3)].map((_, index) => (
             <div
-              key={`smoke-${index}`}
+              key={`circle-${index}`}
               className="absolute rounded-full mix-blend-overlay filter blur-3xl"
               style={{
-                width: `${400 + index * 100}px`,
-                height: `${400 + index * 100}px`,
-                left: `${15 + index * 25}%`,
-                top: `${15 + index * 15}%`,
+                width: `${300 + index * 100}px`,
+                height: `${300 + index * 100}px`,
+                left: `${20 + index * 30}%`,
+                top: `${20 + index * 20}%`,
                 background: `radial-gradient(circle, 
-                  rgba(45, 212, 191, 0.08) 0%,
-                  rgba(45, 212, 191, 0.03) 50%,
-                  rgba(45, 212, 191, 0) 100%)`,
-                animation: `blob ${8 + index * 2}s infinite ease-in-out`,
+                  rgba(59, 130, 246, 0.1) 0%,
+                  rgba(59, 130, 246, 0.05) 50%,
+                  rgba(59, 130, 246, 0) 100%)`,
+                animation: `blob ${7 + index * 2}s infinite ease-in-out`,
               }}
             />
           ))}
         </div>
 
-        {/* Dark gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/95 via-slate-900/90 to-slate-800/95 backdrop-blur-sm" />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-900/80 to-slate-800/90 backdrop-blur-[2px]" />
       </div>
 
       {/* Content */}
