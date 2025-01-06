@@ -6,32 +6,54 @@ const Hero = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Dark background with wave patterns */}
+      {/* Modern wave patterns background */}
       <div className="absolute inset-0 bg-slate-950">
-        <div className="absolute inset-0 opacity-20">
-          {/* Wave patterns */}
-          {[...Array(5)].map((_, index) => (
+        {/* Animated wave patterns */}
+        <div className="absolute inset-0">
+          {[...Array(6)].map((_, index) => (
             <div
               key={index}
-              className="absolute w-full h-[800px] transform"
+              className="absolute w-full transform-gpu"
               style={{
-                top: `${index * 15}%`,
-                left: 0,
+                height: '200%',
+                top: `${index * -15}%`,
                 background: `linear-gradient(180deg, 
-                  rgba(30, 41, 59, 0) 0%,
-                  rgba(30, 41, 59, 0.2) 50%,
-                  rgba(30, 41, 59, 0) 100%)`,
-                transform: `rotate(${index * 5}deg) scale(1.5)`,
-                borderRadius: '50%',
-                filter: 'blur(50px)',
-                animation: `wave${index} 10s infinite ease-in-out`,
+                  rgba(59, 130, 246, 0) 0%,
+                  rgba(59, 130, 246, ${0.03 + index * 0.01}) 45%,
+                  rgba(59, 130, 246, 0) 100%)`,
+                transform: `rotate(${index * 3}deg) scale(1.5)`,
+                transformOrigin: 'center',
+                animation: `wave${index} ${15 + index * 2}s infinite ease-in-out`,
+                opacity: 0.7,
+                borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%',
               }}
             />
           ))}
         </div>
-        
-        {/* Subtle gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/50 via-slate-900/50 to-slate-800/50 backdrop-blur-sm" />
+
+        {/* Additional decorative elements */}
+        <div className="absolute inset-0">
+          {[...Array(3)].map((_, index) => (
+            <div
+              key={`circle-${index}`}
+              className="absolute rounded-full mix-blend-overlay filter blur-3xl"
+              style={{
+                width: `${300 + index * 100}px`,
+                height: `${300 + index * 100}px`,
+                left: `${20 + index * 30}%`,
+                top: `${20 + index * 20}%`,
+                background: `radial-gradient(circle, 
+                  rgba(59, 130, 246, 0.1) 0%,
+                  rgba(59, 130, 246, 0.05) 50%,
+                  rgba(59, 130, 246, 0) 100%)`,
+                animation: `blob ${7 + index * 2}s infinite ease-in-out`,
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-900/80 to-slate-800/90 backdrop-blur-[2px]" />
       </div>
 
       {/* Content */}
