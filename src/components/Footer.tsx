@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 dark:bg-gray-900 py-12 mt-20">
+    <footer className="bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 py-12 mt-20">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About Section */}
@@ -11,6 +11,9 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 dark:text-white">Berkay Cellek</h3>
             <p className="text-gray-600 dark:text-gray-300">
               Crafting digital experiences and bringing ideas to life through modern web development.
+            </p>
+            <p className="mt-4 text-sm text-purple-600 dark:text-purple-400 font-medium">
+              "Transforming visions into digital reality, one pixel at a time. Let's create something extraordinary together."
             </p>
           </div>
 
@@ -44,6 +47,9 @@ const Footer = () => {
           {/* Contact & Social */}
           <div>
             <h3 className="text-lg font-semibold mb-4 dark:text-white">Connect</h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Ready to bring your digital dreams to life? Let's collaborate and create something amazing together.
+            </p>
             <div className="flex space-x-4">
               <Button variant="ghost" size="icon" asChild>
                 <a href="https://github.com/berkaycellek" target="_blank" rel="noopener noreferrer">
