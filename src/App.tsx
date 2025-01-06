@@ -7,6 +7,9 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Index from "./pages/Index";
 import BlogDetail from "./pages/BlogDetail";
+import ModernDesign from "./pages/ModernDesign";
+import TechnicalExcellence from "./pages/TechnicalExcellence";
+import UserExperience from "./pages/UserExperience";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +24,9 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/blog/:id" element={<BlogDetail />} />
+              <Route path="/modern-design" element={<ModernDesign />} />
+              <Route path="/technical-excellence" element={<TechnicalExcellence />} />
+              <Route path="/user-experience" element={<UserExperience />} />
             </Routes>
           </BrowserRouter>
         </TooltipProvider>

@@ -1,7 +1,27 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
+
+  const sections = [
+    {
+      title: t('about.modern.title'),
+      description: t('about.modern.description'),
+      path: '/modern-design'
+    },
+    {
+      title: t('about.code.title'),
+      description: t('about.code.description'),
+      path: '/technical-excellence'
+    },
+    {
+      title: t('about.ux.title'),
+      description: t('about.ux.description'),
+      path: '/user-experience'
+    },
+  ];
 
   return (
     <section id="about" className="py-20 bg-white dark:bg-gray-900">
@@ -19,23 +39,11 @@ const About = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {[
-            {
-              title: t('about.modern.title'),
-              description: t('about.modern.description'),
-            },
-            {
-              title: t('about.code.title'),
-              description: t('about.code.description'),
-            },
-            {
-              title: t('about.ux.title'),
-              description: t('about.ux.description'),
-            },
-          ].map((item, index) => (
+          {sections.map((item, index) => (
             <div
               key={index}
-              className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg hover:shadow-lg transition-shadow"
+              className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg hover:shadow-lg transition-shadow cursor-pointer"
+              onClick={() => navigate(item.path)}
             >
               <h3 className="text-xl font-semibold mb-4 dark:text-white">{item.title}</h3>
               <p className="text-gray-600 dark:text-gray-300">{item.description}</p>
