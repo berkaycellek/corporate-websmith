@@ -4,9 +4,28 @@ import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Blog = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
-  const blogPosts = [
+  const blogPosts = language === 'en' ? [
+    {
+      title: "Modern Web Development Trends",
+      date: "2024-03-15",
+      description: "Exploring the latest trends in web development and how they shape the future of digital experiences.",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      title: "The Impact of AI on Web Design",
+      date: "2024-03-10",
+      description: "How artificial intelligence is revolutionizing the way we approach web design and development.",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      title: "Building Responsive Websites",
+      date: "2024-03-05",
+      description: "Best practices and techniques for creating websites that work seamlessly across all devices.",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+    },
+  ] : [
     {
       title: "Modern Web Geliştirme Trendleri",
       date: "2024-03-15",
@@ -54,14 +73,14 @@ const Blog = () => {
               </div>
               <CardHeader>
                 <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-                  {new Date(post.date).toLocaleDateString('tr-TR')}
+                  {new Date(post.date).toLocaleDateString(language === 'en' ? 'en-US' : 'tr-TR')}
                 </div>
                 <CardTitle className="dark:text-white">{post.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">{post.description}</p>
                 <Button variant="ghost" className="group dark:text-gray-300 dark:hover:text-white">
-                  Devamını Oku <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  {language === 'en' ? 'Read More' : 'Devamını Oku'} <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </CardContent>
             </Card>
