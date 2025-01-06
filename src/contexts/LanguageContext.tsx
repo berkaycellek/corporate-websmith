@@ -42,6 +42,15 @@ const translations = {
     'portfolio.subtitle': 'Showcasing some of my best work in web development',
     'portfolio.egepaslanmaz.description': 'My first client project - A corporate website for a stainless steel manufacturing company.',
     'portfolio.visitSite': 'Visit Site',
+    'contact.badge': "Let's Connect",
+    'contact.title': 'Get in Touch',
+    'contact.subtitle': 'Have a project in mind? Let\'s work together to create something extraordinary.',
+    'contact.form.name': 'Your Name',
+    'contact.form.email': 'Your Email',
+    'contact.form.message': 'Your Message',
+    'contact.form.submit': 'Send Message',
+    'contact.toast.title': 'Message sent!',
+    'contact.toast.description': 'Thank you for your message. I\'ll get back to you soon.',
   },
   tr: {
     'nav.about': 'Hakkımda',
@@ -76,6 +85,15 @@ const translations = {
     'portfolio.subtitle': 'Web geliştirme alanındaki en iyi çalışmalarımdan bazıları',
     'portfolio.egepaslanmaz.description': 'İlk müşteri projem - Paslanmaz çelik üretim şirketi için kurumsal web sitesi.',
     'portfolio.visitSite': 'Siteyi Ziyaret Et',
+    'contact.badge': 'İletişime Geçin',
+    'contact.title': 'İletişime Geçin',
+    'contact.subtitle': 'Aklınızda bir proje mi var? Birlikte olağanüstü bir şey yaratalım.',
+    'contact.form.name': 'Adınız',
+    'contact.form.email': 'E-posta Adresiniz',
+    'contact.form.message': 'Mesajınız',
+    'contact.form.submit': 'Mesaj Gönder',
+    'contact.toast.title': 'Mesaj gönderildi!',
+    'contact.toast.description': 'Mesajınız için teşekkürler. En kısa sürede size geri döneceğim.',
   }
 };
 

@@ -4,8 +4,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { Mail, Send, MessageSquare } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -16,8 +18,8 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
+      title: t('contact.toast.title'),
+      description: t('contact.toast.description'),
     });
     setFormData({ name: "", email: "", message: "" });
   };
@@ -38,13 +40,13 @@ const Contact = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="inline-flex items-center gap-2 px-4 py-1 mb-6 text-sm font-medium bg-white/30 backdrop-blur-sm dark:bg-white/10 rounded-full">
             <MessageSquare className="w-4 h-4" />
-            Let's Connect
+            {t('contact.badge')}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent dark:from-purple-400 dark:to-blue-400">
-            Get in Touch
+            {t('contact.title')}
           </h2>
           <p className="text-gray-600 dark:text-gray-300">
-            Have a project in mind? Let's work together to create something extraordinary.
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -53,7 +55,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Input
-                  placeholder="Your Name"
+                  placeholder={t('contact.form.name')}
                   value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
@@ -65,7 +67,7 @@ const Contact = () => {
               <div>
                 <Input
                   type="email"
-                  placeholder="Your Email"
+                  placeholder={t('contact.form.email')}
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
@@ -76,7 +78,7 @@ const Contact = () => {
               </div>
               <div>
                 <Textarea
-                  placeholder="Your Message"
+                  placeholder={t('contact.form.message')}
                   value={formData.message}
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
@@ -87,7 +89,7 @@ const Contact = () => {
               </div>
               <Button type="submit" className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 dark:from-purple-500 dark:to-blue-500 flex items-center justify-center gap-2 group">
                 <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                Send Message
+                {t('contact.form.submit')}
                 <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </form>
