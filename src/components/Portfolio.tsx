@@ -13,7 +13,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20">
+    <section id="portfolio" className="py-20 dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="inline-block px-4 py-1 mb-6 text-sm font-medium bg-gray-100 dark:bg-gray-800 dark:text-gray-200 rounded-full">
