@@ -19,7 +19,7 @@ const TechnicalExcellence = () => {
 
         <div className="max-w-4xl mx-auto">
           <img 
-            src="https://images.unsplash.com/photo-1721322800607-8c38375eef04"
+            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa"
             alt="Technical Excellence"
             className="w-full h-64 object-cover rounded-lg mb-8"
           />
