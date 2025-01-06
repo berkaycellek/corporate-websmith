@@ -22,14 +22,14 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1 mb-6 text-sm font-medium bg-gray-100 rounded-full">
+          <span className="inline-block px-4 py-1 mb-6 text-sm font-medium bg-gray-100 dark:bg-gray-800 dark:text-gray-200 rounded-full">
             Contact
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Get in Touch</h2>
-          <p className="text-gray-600">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 dark:text-white">Get in Touch</h2>
+          <p className="text-gray-600 dark:text-gray-300">
             Have a project in mind? Let's work together to create something great.
           </p>
         </div>
@@ -44,6 +44,7 @@ const Contact = () => {
                   setFormData({ ...formData, name: e.target.value })
                 }
                 required
+                className="dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700"
               />
             </div>
             <div>
@@ -55,6 +56,7 @@ const Contact = () => {
                   setFormData({ ...formData, email: e.target.value })
                 }
                 required
+                className="dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700"
               />
             </div>
             <div>
@@ -65,7 +67,7 @@ const Contact = () => {
                   setFormData({ ...formData, message: e.target.value })
                 }
                 required
-                className="min-h-[150px]"
+                className="min-h-[150px] dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700"
               />
             </div>
             <Button type="submit" className="w-full">
