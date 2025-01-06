@@ -1,51 +1,48 @@
-import { useLanguage } from "@/contexts/LanguageContext";
-import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import Navbar from "@/components/Navbar";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 
 const UserExperience = () => {
-  const { t } = useLanguage();
   const navigate = useNavigate();
 
   return (
-    <main className="relative min-h-screen bg-background">
-      <Navbar />
-      <div className="container mx-auto px-4 pt-24">
-        <Button
+    <div className="min-h-screen bg-white dark:bg-gray-900 py-12">
+      <div className="container mx-auto px-4">
+        <Button 
+          variant="ghost" 
           onClick={() => navigate(-1)}
           className="mb-8"
-          variant="outline"
         >
-          ← Geri Dön
+          <ArrowLeft className="mr-2 h-4 w-4" />
+          Geri Dön
         </Button>
-        
+
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-6 dark:text-white">
-            {t('about.ux.title')}
+          <img 
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+            alt="User Experience"
+            className="w-full h-64 object-cover rounded-lg mb-8"
+          />
+          
+          <h1 className="text-3xl font-bold mb-6 dark:text-white">
+            Kullanıcı Deneyimi
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-            {t('about.ux.description')}
-          </p>
           
           <div className="prose dark:prose-invert max-w-none">
-            <h2>UX Yaklaşımımız</h2>
-            <p>
-              Kullanıcı deneyimi tasarımında, hedef kitlenizin ihtiyaçlarını 
-              ve beklentilerini merkeze alıyoruz. Kullanıcı araştırmaları ve 
-              testlerle desteklenen, veri odaklı kararlar alıyoruz.
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Kullanıcı deneyimi tasarımında sezgisel ve kolay kullanılabilir arayüzler
+              oluşturuyoruz. Her detayı düşünerek, ziyaretçilerinizin web sitenizde keyifli
+              bir deneyim yaşamasını sağlıyoruz.
             </p>
             
-            <h2>UX Süreçlerimiz</h2>
-            <ul>
-              <li>Kullanıcı Araştırması</li>
-              <li>Wireframing & Prototyping</li>
-              <li>Kullanılabilirlik Testleri</li>
-              <li>İteratif Tasarım Süreci</li>
-            </ul>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Kullanıcı geri bildirimlerini değerlendirerek, sürekli iyileştirmeler yapıyor
+              ve en iyi deneyimi sunmak için çalışıyoruz.
+            </p>
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 
