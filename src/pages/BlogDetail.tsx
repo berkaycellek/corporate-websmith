@@ -1,10 +1,13 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 
 const BlogDetail = () => {
   const { id } = useParams();
   const { language } = useLanguage();
+  const navigate = useNavigate();
 
   const getBlogPost = () => {
     const posts = language === 'en' ? [
@@ -95,6 +98,14 @@ const BlogDetail = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-20">
       <div className="container mx-auto px-4">
+        <Button
+          variant="ghost"
+          className="mb-6"
+          onClick={() => navigate(-1)}
+        >
+          <ArrowLeft className="mr-2" />
+          {language === 'en' ? 'Back' : 'Geri Dön'}
+        </Button>
         <Card className="max-w-4xl mx-auto overflow-hidden border-0 bg-white dark:bg-gray-800">
           <div className="aspect-video w-full overflow-hidden">
             <img
