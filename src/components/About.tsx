@@ -1,15 +1,15 @@
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1 mb-6 text-sm font-medium bg-gray-100 rounded-full">
+          <span className="inline-block px-4 py-1 mb-6 text-sm font-medium bg-gray-100 dark:bg-gray-800 dark:text-gray-200 rounded-full">
             About Me
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 dark:text-white">
             Passionate About Creating Beautiful Digital Solutions
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-600 dark:text-gray-300">
             With years of experience in web development, I specialize in creating
             modern, responsive websites that help businesses grow their online
             presence.
@@ -36,10 +36,10 @@ const About = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className="p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow"
+              className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg hover:shadow-lg transition-shadow"
             >
-              <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
-              <p className="text-gray-600">{item.description}</p>
+              <h3 className="text-xl font-semibold mb-4 dark:text-white">{item.title}</h3>
+              <p className="text-gray-600 dark:text-gray-300">{item.description}</p>
             </div>
           ))}
         </div>
