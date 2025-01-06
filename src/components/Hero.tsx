@@ -32,7 +32,7 @@ const Hero = () => {
             <Button size="lg" className="bg-white text-blue-950 hover:bg-gray-100 dark:bg-white/10 dark:text-white dark:hover:bg-white/20" asChild>
               <a href="#portfolio">{t('hero.portfolio')}</a>
             </Button>
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10 dark:border-white/50 dark:hover:bg-white/10" asChild>
+            <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white/20 dark:border-white dark:hover:bg-white/20 shadow-lg" asChild>
               <a href="#contact">{t('hero.contact')}</a>
             </Button>
           </div>
