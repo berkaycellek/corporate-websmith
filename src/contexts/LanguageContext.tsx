@@ -101,7 +101,7 @@ const translations = {
     'contact.toast.title': 'Mesaj gönderildi!',
     'contact.toast.description': 'Mesajınız için teşekkürler. En kısa sürede size geri döneceğim.',
     'footer.about.description': 'Modern web geliştirme ile dijital deneyimler yaratıyor ve fikirleri hayata geçiriyoruz.',
-    'footer.about.quote': 'Dijital gerçekliği, bir piksel at a time dönüştürüyoruz. Birlikte olağanüstü bir şey yaratalım.',
+    'footer.about.quote': 'Dijital gerçekliği, bir piksel bir piksel dönüştürüyoruz. Birlikte olağanüstü bir şey yaratalım.',
     'footer.quickLinks.title': 'Hızlı Bağlantılar',
     'footer.connect.title': 'Bağlantı',
     'footer.connect.description': 'Dijital hayallerinizi hayata geçirmeye hazır mısınız? Birlikte harika bir şeyler yaratalım.',
