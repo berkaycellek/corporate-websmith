@@ -19,7 +19,7 @@ const ModernDesign = () => {
 
         <div className="max-w-4xl mx-auto">
           <img 
-            src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9"
+            src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
             alt="Modern Design"
             className="w-full h-64 object-cover rounded-lg mb-8"
           />
