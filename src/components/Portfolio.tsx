@@ -7,7 +7,7 @@ const Portfolio = () => {
     {
       title: "Ege Paslanmaz",
       description: "My first client project - A corporate website for a stainless steel manufacturing company.",
-      image: "/lovable-uploads/egepaslanmaz-portfolio.png",
+      image: "/lovable-uploads/c1c1c7be-8289-4f5f-8e99-a34c6a76ee23.png",
       link: "https://egepaslanmaz.com",
     },
   ];
