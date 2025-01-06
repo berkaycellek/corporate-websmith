@@ -51,6 +51,12 @@ const translations = {
     'contact.form.submit': 'Send Message',
     'contact.toast.title': 'Message sent!',
     'contact.toast.description': 'Thank you for your message. I\'ll get back to you soon.',
+    'footer.about.description': 'Crafting digital experiences and bringing ideas to life through modern web development.',
+    'footer.about.quote': 'Transforming visions into digital reality, one pixel at a time. Let\'s create something extraordinary together.',
+    'footer.quickLinks.title': 'Quick Links',
+    'footer.connect.title': 'Connect',
+    'footer.connect.description': 'Ready to bring your digital dreams to life? Let\'s collaborate and create something amazing together.',
+    'footer.rights': 'All rights reserved.',
   },
   tr: {
     'nav.about': 'Hakkımda',
@@ -94,6 +100,12 @@ const translations = {
     'contact.form.submit': 'Mesaj Gönder',
     'contact.toast.title': 'Mesaj gönderildi!',
     'contact.toast.description': 'Mesajınız için teşekkürler. En kısa sürede size geri döneceğim.',
+    'footer.about.description': 'Modern web geliştirme ile dijital deneyimler yaratıyor ve fikirleri hayata geçiriyoruz.',
+    'footer.about.quote': 'Dijital gerçekliği, bir piksel at a time dönüştürüyoruz. Birlikte olağanüstü bir şey yaratalım.',
+    'footer.quickLinks.title': 'Hızlı Bağlantılar',
+    'footer.connect.title': 'Bağlantı',
+    'footer.connect.description': 'Dijital hayallerinizi hayata geçirmeye hazır mısınız? Birlikte harika bir şeyler yaratalım.',
+    'footer.rights': 'Tüm hakları saklıdır.',
   }
 };
 

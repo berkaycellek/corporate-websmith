@@ -1,7 +1,10 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "./ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+  
   return (
     <footer className="bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 py-12 mt-20">
       <div className="container mx-auto px-4">
@@ -10,35 +13,35 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 dark:text-white">Berkay Cellek</h3>
             <p className="text-gray-600 dark:text-gray-300">
-              Crafting digital experiences and bringing ideas to life through modern web development.
+              {t('footer.about.description')}
             </p>
             <p className="mt-4 text-sm text-purple-600 dark:text-purple-400 font-medium">
-              "Transforming visions into digital reality, one pixel at a time. Let's create something extraordinary together."
+              {t('footer.about.quote')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 dark:text-white">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4 dark:text-white">{t('footer.quickLinks.title')}</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#about" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">
-                  About
+                  {t('nav.about')}
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">
-                  Services
+                  {t('nav.services')}
                 </a>
               </li>
               <li>
                 <a href="#portfolio" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">
-                  Portfolio
+                  {t('nav.portfolio')}
                 </a>
               </li>
               <li>
                 <a href="#contact" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">
-                  Contact
+                  {t('nav.contact')}
                 </a>
               </li>
             </ul>
@@ -46,9 +49,9 @@ const Footer = () => {
 
           {/* Contact & Social */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 dark:text-white">Connect</h3>
+            <h3 className="text-lg font-semibold mb-4 dark:text-white">{t('footer.connect.title')}</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Ready to bring your digital dreams to life? Let's collaborate and create something amazing together.
+              {t('footer.connect.description')}
             </p>
             <div className="flex space-x-4">
               <Button variant="ghost" size="icon" asChild>
@@ -72,7 +75,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-600 dark:text-gray-300">
-            © {new Date().getFullYear()} Berkay Cellek. All rights reserved.
+            © {new Date().getFullYear()} Berkay Cellek. {t('footer.rights')}
           </p>
         </div>
       </div>
