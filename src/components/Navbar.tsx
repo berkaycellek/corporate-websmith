@@ -2,10 +2,13 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,28 +33,30 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             <a href="#about" className="relative group">
-              <span className="text-foreground hover:text-primary transition-colors">About</span>
+              <span className="text-foreground hover:text-primary transition-colors">{t('nav.about')}</span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
             </a>
             <a href="#services" className="relative group">
-              <span className="text-foreground hover:text-primary transition-colors">Services</span>
+              <span className="text-foreground hover:text-primary transition-colors">{t('nav.services')}</span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
             </a>
             <a href="#portfolio" className="relative group">
-              <span className="text-foreground hover:text-primary transition-colors">Portfolio</span>
+              <span className="text-foreground hover:text-primary transition-colors">{t('nav.portfolio')}</span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
             </a>
+            <LanguageSwitcher />
             <ThemeToggle />
             <Button
               className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300"
               asChild
             >
-              <a href="#contact">Contact</a>
+              <a href="#contact">{t('nav.contact')}</a>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-4">
+            <LanguageSwitcher />
             <ThemeToggle />
             <button
               className="p-2 rounded-lg hover:bg-accent transition-colors"
@@ -71,21 +76,21 @@ const Navbar = () => {
                 className="text-foreground hover:text-primary hover:bg-accent px-4 py-2 rounded-lg transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                About
+                {t('nav.about')}
               </a>
               <a
                 href="#services"
                 className="text-foreground hover:text-primary hover:bg-accent px-4 py-2 rounded-lg transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Services
+                {t('nav.services')}
               </a>
               <a
                 href="#portfolio"
                 className="text-foreground hover:text-primary hover:bg-accent px-4 py-2 rounded-lg transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Portfolio
+                {t('nav.portfolio')}
               </a>
               <div className="px-4">
                 <Button
@@ -93,7 +98,7 @@ const Navbar = () => {
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <a href="#contact">Contact</a>
+                  <a href="#contact">{t('nav.contact')}</a>
                 </Button>
               </div>
             </div>
