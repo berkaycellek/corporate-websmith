@@ -1,37 +1,36 @@
+import { useLanguage } from "@/contexts/LanguageContext";
+
 const About = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="about" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="inline-block px-4 py-1 mb-6 text-sm font-medium bg-gray-100 dark:bg-gray-800 dark:text-gray-200 rounded-full">
-            About Me
+            {t('about.badge')}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 dark:text-white">
-            Passionate About Creating Beautiful Digital Solutions
+            {t('about.title')}
           </h2>
           <p className="text-gray-600 dark:text-gray-300">
-            With years of experience in web development, I specialize in creating
-            modern, responsive websites that help businesses grow their online
-            presence.
+            {t('about.description')}
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {
-              title: "Modern Design",
-              description:
-                "Creating beautiful, intuitive interfaces that engage users and drive results.",
+              title: t('about.modern.title'),
+              description: t('about.modern.description'),
             },
             {
-              title: "Clean Code",
-              description:
-                "Writing maintainable, scalable code that stands the test of time.",
+              title: t('about.code.title'),
+              description: t('about.code.description'),
             },
             {
-              title: "User Experience",
-              description:
-                "Focusing on creating seamless experiences that users love.",
+              title: t('about.ux.title'),
+              description: t('about.ux.description'),
             },
           ].map((item, index) => (
             <div

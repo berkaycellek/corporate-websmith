@@ -19,6 +19,15 @@ const translations = {
     'hero.subtitle': 'Transforming ideas into elegant, functional websites that drive results for businesses worldwide.',
     'hero.portfolio': 'View Portfolio',
     'hero.contact': 'Get in Touch',
+    'about.badge': 'About Me',
+    'about.title': 'Passionate About Creating Beautiful Digital Solutions',
+    'about.description': 'With years of experience in web development, I specialize in creating modern, responsive websites that help businesses grow their online presence.',
+    'about.modern.title': 'Modern Design',
+    'about.modern.description': 'Creating beautiful, intuitive interfaces that engage users and drive results.',
+    'about.code.title': 'Clean Code',
+    'about.code.description': 'Writing maintainable, scalable code that stands the test of time.',
+    'about.ux.title': 'User Experience',
+    'about.ux.description': 'Focusing on creating seamless experiences that users love.',
   },
   tr: {
     'nav.about': 'Hakkımda',
@@ -30,6 +39,15 @@ const translations = {
     'hero.subtitle': 'Fikirleri dünya çapındaki işletmeler için sonuç getiren zarif ve işlevsel web sitelerine dönüştürüyoruz.',
     'hero.portfolio': 'Portfolyoyu Görüntüle',
     'hero.contact': 'İletişime Geç',
+    'about.badge': 'Hakkımda',
+    'about.title': 'Güzel Dijital Çözümler Yaratmaya Tutkulu',
+    'about.description': 'Web geliştirme alanındaki yılların deneyimiyle, işletmelerin çevrimiçi varlıklarını büyütmelerine yardımcı olan modern, duyarlı web siteleri oluşturmada uzmanım.',
+    'about.modern.title': 'Modern Tasarım',
+    'about.modern.description': 'Kullanıcıları cezbeden ve sonuç getiren güzel, sezgisel arayüzler oluşturuyorum.',
+    'about.code.title': 'Temiz Kod',
+    'about.code.description': 'Zamanın testinden geçen, sürdürülebilir ve ölçeklenebilir kod yazıyorum.',
+    'about.ux.title': 'Kullanıcı Deneyimi',
+    'about.ux.description': 'Kullanıcıların sevdiği kusursuz deneyimler yaratmaya odaklanıyorum.',
   }
 };
 
