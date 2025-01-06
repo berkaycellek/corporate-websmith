@@ -1,25 +1,30 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code, Layout, Smartphone } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
 
   const services = [
     {
       icon: Layout,
       title: t('services.webdesign.title'),
       description: t('services.webdesign.description'),
+      path: '/services/web-design'
     },
     {
       icon: Code,
       title: t('services.development.title'),
       description: t('services.development.description'),
+      path: '/services/development'
     },
     {
       icon: Smartphone,
       title: t('services.responsive.title'),
       description: t('services.responsive.description'),
+      path: '/services/responsive'
     },
   ];
 
@@ -42,7 +47,8 @@ const Services = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="hover:shadow-lg transition-shadow border-0 bg-white dark:bg-gray-800"
+              className="hover:shadow-lg transition-shadow border-0 bg-white dark:bg-gray-800 cursor-pointer"
+              onClick={() => navigate(service.path)}
             >
               <CardHeader>
                 <service.icon className="w-12 h-12 mb-4 text-gray-700 dark:text-gray-300" />

@@ -10,6 +10,9 @@ import BlogDetail from "./pages/BlogDetail";
 import ModernDesign from "./pages/ModernDesign";
 import TechnicalExcellence from "./pages/TechnicalExcellence";
 import UserExperience from "./pages/UserExperience";
+import WebDesignService from "./pages/WebDesignService";
+import DevelopmentService from "./pages/DevelopmentService";
+import ResponsiveService from "./pages/ResponsiveService";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +30,9 @@ const App = () => (
               <Route path="/modern-design" element={<ModernDesign />} />
               <Route path="/technical-excellence" element={<TechnicalExcellence />} />
               <Route path="/user-experience" element={<UserExperience />} />
+              <Route path="/services/web-design" element={<WebDesignService />} />
+              <Route path="/services/development" element={<DevelopmentService />} />
+              <Route path="/services/responsive" element={<ResponsiveService />} />
             </Routes>
           </BrowserRouter>
         </TooltipProvider>
