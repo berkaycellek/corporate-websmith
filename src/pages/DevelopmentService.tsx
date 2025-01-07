@@ -2,14 +2,16 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Navbar from "@/components/Navbar";
 
 const DevelopmentService = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen py-20 bg-gray-50 dark:bg-gray-900">
-      <div className="container mx-auto px-4">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <Navbar />
+      <div className="container mx-auto px-4 pt-20">
         <Button
           variant="ghost"
           className="mb-6 hover:bg-gray-100 dark:hover:bg-gray-800"
@@ -22,10 +24,32 @@ const DevelopmentService = () => {
         <h1 className="text-4xl font-bold mb-8 text-center dark:text-white">
           {t('services.development.title')}
         </h1>
+
         <div className="max-w-3xl mx-auto prose dark:prose-invert">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <img
+              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
+              alt="Software Development"
+              className="rounded-lg shadow-lg w-full h-64 object-cover"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+              alt="Developer Workspace"
+              className="rounded-lg shadow-lg w-full h-64 object-cover"
+            />
+          </div>
+
           <p className="text-lg mb-6">
             {t('services.development.description')}
           </p>
+
+          <div className="relative mb-12">
+            <img
+              src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
+              alt="Code Development"
+              className="rounded-lg shadow-lg w-full h-48 object-cover mb-8"
+            />
+          </div>
 
           <h2 className="text-2xl font-semibold mb-4">Kullandığımız Teknolojiler</h2>
           <ul className="list-disc pl-6 mb-8">
@@ -36,6 +60,14 @@ const DevelopmentService = () => {
             <li>MongoDB & PostgreSQL - Güvenilir veri depolama çözümleri</li>
             <li>Docker & Kubernetes - Ölçeklenebilir deployment çözümleri</li>
           </ul>
+
+          <div className="relative mb-12">
+            <img
+              src="https://images.unsplash.com/photo-1483058712412-4245e9b90334"
+              alt="Development Setup"
+              className="rounded-lg shadow-lg w-full h-48 object-cover mb-8"
+            />
+          </div>
 
           <h2 className="text-2xl font-semibold mb-4">Geliştirme Sürecimiz</h2>
           <ol className="list-decimal pl-6 mb-8">
