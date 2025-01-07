@@ -51,24 +51,6 @@ const DevelopmentService = () => {
             />
           </div>
 
-          <h2 className="text-2xl font-semibold mb-4">Kullandığımız Teknolojiler</h2>
-          <ul className="list-disc pl-6 mb-8">
-            <li>React & Next.js - Modern ve performanslı kullanıcı arayüzleri</li>
-            <li>Node.js & Express - Güçlü backend çözümleri</li>
-            <li>TypeScript - Tip güvenli ve sürdürülebilir kod</li>
-            <li>REST API & GraphQL - Esnek ve verimli veri iletişimi</li>
-            <li>MongoDB & PostgreSQL - Güvenilir veri depolama çözümleri</li>
-            <li>Docker & Kubernetes - Ölçeklenebilir deployment çözümleri</li>
-          </ul>
-
-          <div className="relative mb-12">
-            <img
-              src="https://images.unsplash.com/photo-1483058712412-4245e9b90334"
-              alt="Development Setup"
-              className="rounded-lg shadow-lg w-full h-48 object-cover mb-8"
-            />
-          </div>
-
           <h2 className="text-2xl font-semibold mb-4">Geliştirme Sürecimiz</h2>
           <ol className="list-decimal pl-6 mb-8">
             <li className="mb-4">
