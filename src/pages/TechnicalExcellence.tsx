@@ -14,7 +14,7 @@ const TechnicalExcellence = () => {
           <Button 
             variant="ghost" 
             onClick={() => navigate(-1)}
-            className="mb-8"
+            className="mt-16 mb-8"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Geri Dön
