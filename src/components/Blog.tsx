@@ -1,11 +1,31 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Share2 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "react-router-dom";
+import { toast } from "sonner";
 
 const Blog = () => {
   const { t, language } = useLanguage();
+
+  const handleShare = (platform: string) => {
+    const url = window.location.href;
+    const text = language === 'en' ? 'Check out this awesome blog post!' : 'Bu harika blog yazısına göz atın!';
+    
+    switch (platform) {
+      case 'twitter':
+        window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        break;
+      case 'facebook':
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        break;
+      case 'linkedin':
+        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+        break;
+    }
+    
+    toast.success(language === 'en' ? 'Shared successfully!' : 'Başarıyla paylaşıldı!');
+  };
 
   const blogPosts = language === 'en' ? [
     {
@@ -13,21 +33,21 @@ const Blog = () => {
       title: "Modern Web Development Trends",
       date: "2024-03-15",
       description: "Exploring the latest trends in web development and how they shape the future of digital experiences.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: "2",
       title: "The Impact of AI on Web Design",
       date: "2024-03-10",
       description: "How artificial intelligence is revolutionizing the way we approach web design and development.",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: "3",
       title: "Building Responsive Websites",
       date: "2024-03-05",
       description: "Best practices and techniques for creating websites that work seamlessly across all devices.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=800&q=80",
     },
   ] : [
     {
@@ -35,21 +55,21 @@ const Blog = () => {
       title: "Modern Web Geliştirme Trendleri",
       date: "2024-03-15",
       description: "Web geliştirmedeki en son trendleri ve bunların dijital deneyimlerin geleceğini nasıl şekillendirdiğini keşfediyoruz.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: "2",
       title: "Yapay Zekanın Web Tasarımına Etkisi",
       date: "2024-03-10",
       description: "Yapay zekanın web tasarımı ve geliştirme yaklaşımımızı nasıl devrimleştirdiğini inceliyoruz.",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: "3",
       title: "Duyarlı Web Siteleri Oluşturma",
       date: "2024-03-05",
       description: "Tüm cihazlarda sorunsuz çalışan web siteleri oluşturmak için en iyi uygulamalar ve teknikler.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=800&q=80",
     },
   ];
 
@@ -94,6 +114,39 @@ const Blog = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Share Section */}
+        <div className="mt-16 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-full shadow-sm mb-6">
+            <Share2 className="w-4 h-4" />
+            <span className="text-sm font-medium">
+              {language === 'en' ? 'Share These Posts' : 'Bu Yazıları Paylaş'}
+            </span>
+          </div>
+          <div className="flex justify-center gap-4">
+            <Button
+              variant="outline"
+              onClick={() => handleShare('twitter')}
+              className="hover:bg-blue-50 dark:hover:bg-blue-900"
+            >
+              Twitter
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => handleShare('facebook')}
+              className="hover:bg-blue-50 dark:hover:bg-blue-900"
+            >
+              Facebook
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => handleShare('linkedin')}
+              className="hover:bg-blue-50 dark:hover:bg-blue-900"
+            >
+              LinkedIn
+            </Button>
+          </div>
         </div>
       </div>
     </section>
