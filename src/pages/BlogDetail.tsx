@@ -2,13 +2,33 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Share2 } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import { toast } from "sonner";
 
 const BlogDetail = () => {
   const { id } = useParams();
   const { language } = useLanguage();
   const navigate = useNavigate();
+
+  const handleShare = (platform: string) => {
+    const url = window.location.href;
+    const text = language === 'en' ? 'Check out this awesome blog post!' : 'Bu harika blog yazısına göz atın!';
+    
+    switch (platform) {
+      case 'twitter':
+        window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        break;
+      case 'facebook':
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        break;
+      case 'linkedin':
+        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+        break;
+    }
+    
+    toast.success(language === 'en' ? 'Shared successfully!' : 'Başarıyla paylaşıldı!');
+  };
 
   const getBlogPost = () => {
     const posts = language === 'en' ? [
@@ -133,6 +153,39 @@ const BlogDetail = () => {
                     {paragraph}
                   </p>
                 ))}
+              </div>
+
+              {/* Share Section */}
+              <div className="mt-16 text-center">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-full shadow-sm mb-6">
+                  <Share2 className="w-4 h-4" />
+                  <span className="text-sm font-medium">
+                    {language === 'en' ? 'Share This Post' : 'Bu Yazıyı Paylaş'}
+                  </span>
+                </div>
+                <div className="flex justify-center gap-4">
+                  <Button
+                    variant="outline"
+                    onClick={() => handleShare('twitter')}
+                    className="hover:bg-blue-50 dark:hover:bg-blue-900"
+                  >
+                    Twitter
+                  </Button>
+                  <Button
+                    variant="outline"
+                    onClick={() => handleShare('facebook')}
+                    className="hover:bg-blue-50 dark:hover:bg-blue-900"
+                  >
+                    Facebook
+                  </Button>
+                  <Button
+                    variant="outline"
+                    onClick={() => handleShare('linkedin')}
+                    className="hover:bg-blue-50 dark:hover:bg-blue-900"
+                  >
+                    LinkedIn
+                  </Button>
+                </div>
               </div>
             </CardContent>
           </Card>
