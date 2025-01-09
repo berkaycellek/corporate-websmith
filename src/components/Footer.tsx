@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="relative mt-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-950 opacity-95" />
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"30\" height=\"30\" viewBox=\"0 0 30 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z\" fill=\"rgba(255,255,255,0.07)\"%3E%3C/path%3E%3C/svg%3E')] opacity-10" />
+      <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-10" />
       
       <div className="relative container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-white">
