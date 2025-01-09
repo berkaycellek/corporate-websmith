@@ -6,7 +6,7 @@ const Footer = () => {
   const { t } = useLanguage();
   
   return (
-    <footer className="relative mt-20 overflow-hidden">
+    <div className="relative mt-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-950 opacity-95" />
       <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-10" />
       
@@ -107,7 +107,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
+    </div>
   );
 };
 
