@@ -81,16 +81,6 @@ const DevelopmentService = () => {
             <li>Düzenli bakım ve güncelleme hizmetleri</li>
           </ul>
 
-          <h2 className="text-2xl font-semibold mb-4">Neden Bizi Seçmelisiniz?</h2>
-          <ul className="list-disc pl-6 mb-8">
-            <li>10+ yıllık sektör deneyimi</li>
-            <li>100+ başarılı proje</li>
-            <li>Uzman geliştirici ekibi</li>
-            <li>Güncel teknoloji kullanımı</li>
-            <li>Rekabetçi fiyatlandırma</li>
-            <li>Hızlı teslimat süreleri</li>
-          </ul>
-
           <div className="bg-blue-50 dark:bg-blue-900 p-6 rounded-lg mt-8">
             <h3 className="text-xl font-semibold mb-3">Ücretsiz Danışmanlık</h3>
             <p className="mb-4">Projeniz için en uygun çözümü birlikte belirleyelim. Hemen iletişime geçin!</p>
