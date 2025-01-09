@@ -43,15 +43,6 @@ const WebDesignService = () => {
             {t('services.webdesign.description')}
           </p>
 
-          <h2 className="text-2xl font-semibold mb-4">Web Tasarım Hizmetlerimiz</h2>
-          <ul className="list-disc pl-6 mb-8">
-            <li>Özel ve Responsive Web Tasarımı</li>
-            <li>E-ticaret Web Siteleri</li>
-            <li>Kurumsal Web Siteleri</li>
-            <li>Landing Page Tasarımları</li>
-            <li>Web Uygulama Arayüzleri</li>
-          </ul>
-
           <div className="relative mb-12">
             <img
               src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
