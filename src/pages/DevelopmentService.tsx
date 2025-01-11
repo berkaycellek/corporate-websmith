@@ -8,6 +8,10 @@ const DevelopmentService = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
 
+  const handleContactClick = () => {
+    navigate('/#contact');
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Navbar />
@@ -75,7 +79,7 @@ const DevelopmentService = () => {
             <h3 className="text-xl font-semibold mb-3">Ücretsiz Danışmanlık</h3>
             <p className="mb-4">Projeniz için en uygun çözümü birlikte belirleyelim. Hemen iletişime geçin!</p>
             <Button 
-              onClick={() => navigate('/contact')}
+              onClick={handleContactClick}
               className="bg-blue-600 hover:bg-blue-700 text-white"
             >
               İletişime Geç
