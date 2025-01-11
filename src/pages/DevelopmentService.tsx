@@ -71,16 +71,6 @@ const DevelopmentService = () => {
             </li>
           </ol>
 
-          <h2 className="text-2xl font-semibold mb-4">Öne Çıkan Özelliklerimiz</h2>
-          <ul className="list-disc pl-6 mb-8">
-            <li>Modern ve güvenli kod mimarisi</li>
-            <li>Yüksek performans optimizasyonu</li>
-            <li>Responsive ve kullanıcı dostu tasarımlar</li>
-            <li>SEO uyumlu geliştirme</li>
-            <li>7/24 teknik destek</li>
-            <li>Düzenli bakım ve güncelleme hizmetleri</li>
-          </ul>
-
           <div className="bg-blue-50 dark:bg-blue-900 p-6 rounded-lg mt-8">
             <h3 className="text-xl font-semibold mb-3">Ücretsiz Danışmanlık</h3>
             <p className="mb-4">Projeniz için en uygun çözümü birlikte belirleyelim. Hemen iletişime geçin!</p>
