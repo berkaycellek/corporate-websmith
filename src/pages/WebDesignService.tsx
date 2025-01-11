@@ -78,15 +78,6 @@ const WebDesignService = () => {
             <li>Lansman ve Destek</li>
           </ol>
 
-          <h2 className="text-2xl font-semibold mb-4">Neden Bizi Seçmelisiniz?</h2>
-          <ul className="list-disc pl-6 mb-8">
-            <li>10+ Yıllık Sektör Deneyimi</li>
-            <li>250+ Başarılı Proje</li>
-            <li>7/24 Teknik Destek</li>
-            <li>Rekabetçi Fiyatlandırma</li>
-            <li>Sürekli İletişim ve Şeffaflık</li>
-          </ul>
-
           <div className="bg-primary/5 p-8 rounded-lg mt-12">
             <h3 className="text-xl font-semibold mb-4">Ücretsiz Danışmanlık</h3>
             <p className="mb-4">
