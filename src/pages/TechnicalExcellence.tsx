@@ -2,9 +2,11 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const TechnicalExcellence = () => {
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
@@ -17,7 +19,7 @@ const TechnicalExcellence = () => {
             className="mt-16 mb-8"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Geri Dön
+            {t('common.back')}
           </Button>
 
           <div className="max-w-4xl mx-auto">
@@ -31,19 +33,15 @@ const TechnicalExcellence = () => {
             </div>
             
             <h1 className="text-3xl font-bold mb-6 dark:text-white">
-              Teknik Mükemmellik
+              {t('services.code.title')}
             </h1>
             
             <div className="prose dark:prose-invert max-w-none">
               <p>
-                Modern web geliştirme dünyasında teknik mükemmellik, başarılı projelerin temelidir. 
-                En son teknolojileri ve en iyi uygulamaları kullanarak, yüksek performanslı ve 
-                ölçeklenebilir çözümler sunuyoruz.
+                {t('services.code.description')}
               </p>
               <p>
-                Her projede kod kalitesi, güvenlik ve performans optimizasyonu önceliklerimiz 
-                arasındadır. Test odaklı geliştirme yaklaşımımız ve sürekli entegrasyon 
-                süreçlerimizle, güvenilir ve sürdürülebilir uygulamalar geliştiriyoruz.
+                {t('services.code.process')}
               </p>
             </div>
           </div>
