@@ -69,6 +69,9 @@ const translations = {
     'services.code.title': 'Technical Excellence',
     'services.code.description': 'In the modern web development world, technical excellence is the foundation of successful projects. We deliver high-performance and scalable solutions using the latest technologies and best practices.',
     'services.code.process': 'Code quality, security, and performance optimization are among our priorities in every project. With our test-driven development approach and continuous integration processes, we develop reliable and sustainable applications.',
+    'services.ux.title': 'User Experience',
+    'services.ux.description': 'User experience (UX) is at the heart of modern web design. We understand user needs and expectations to design intuitive and easy-to-use interfaces.',
+    'services.ux.process': 'In every project, we aim to maximize user satisfaction through user research, usability testing, and continuous feedback loops.',
   },
   tr: {
     'nav.about': 'Hakkımda',
