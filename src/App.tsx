@@ -17,9 +17,9 @@ import ResponsiveService from "./pages/ResponsiveService";
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
-      <LanguageProvider>
+  <LanguageProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
         <TooltipProvider>
           <Toaster />
           <Sonner />
@@ -36,9 +36,9 @@ const App = () => (
             </Routes>
           </BrowserRouter>
         </TooltipProvider>
-      </LanguageProvider>
-    </ThemeProvider>
-  </QueryClientProvider>
+      </ThemeProvider>
+    </QueryClientProvider>
+  </LanguageProvider>
 );
 
 export default App;
