@@ -72,6 +72,8 @@ const translations = {
     'services.ux.title': 'User Experience',
     'services.ux.description': 'User experience (UX) is at the heart of modern web design. We understand user needs and expectations to design intuitive and easy-to-use interfaces.',
     'services.ux.process': 'In every project, we aim to maximize user satisfaction through user research, usability testing, and continuous feedback loops.',
+    'services.modern.title': 'Modern Design',
+    'services.modern.description': 'Modern design embraces a clean and functional approach that prioritizes user experience. We enhance your digital presence with minimalist elements, balanced color palettes, and user-friendly interfaces. Each project is carefully designed to reflect your brand\'s unique identity.',
   },
   tr: {
     'nav.about': 'Hakkımda',
@@ -133,6 +135,11 @@ const translations = {
     'services.code.title': 'Teknik Mükemmellik',
     'services.code.description': 'Modern web geliştirme dünyasında teknik mükemmellik, başarılı projelerin temelidir. En son teknolojileri ve en iyi uygulamaları kullanarak, yüksek performanslı ve ölçeklenebilir çözümler sunuyoruz.',
     'services.code.process': 'Her projede kod kalitesi, güvenlik ve performans optimizasyonu önceliklerimiz arasındadır. Test odaklı geliştirme yaklaşımımız ve sürekli entegrasyon süreçlerimizle, güvenilir ve sürdürülebilir uygulamalar geliştiriyoruz.',
+    'services.ux.title': 'Kullanıcı Deneyimi',
+    'services.ux.description': 'Kullanıcı deneyimi (UX) modern web tasarımının kalbinde yer alır. Kullanıcı ihtiyaçlarını ve beklentilerini anlayarak sezgisel ve kullanımı kolay arayüzler tasarlıyoruz.',
+    'services.ux.process': 'Her projede kullanıcı memnuniyetini artırmayı hedefliyoruz.',
+    'services.modern.title': 'Modern Tasarım',
+    'services.modern.description': 'Modern tasarım, kullanıcı deneyimini ön planda tutan, sade ve işlevsel bir yaklaşımı benimser. Minimalist öğeler, dengeli renk paletleri ve kullanıcı dostu arayüzler ile dijital varlığınızı güçlendiriyoruz. Her proje, markanızın özgün kimliğini yansıtacak şekilde özenle tasarlanır.',
   }
 };
 
