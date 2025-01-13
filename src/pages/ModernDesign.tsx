@@ -37,20 +37,8 @@ const ModernDesign = () => {
             </h1>
             
             <div className="prose dark:prose-invert max-w-none">
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                {t('services.modern.description')}
-              </p>
-              
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                {t('services.modern.process')}
-              </p>
-
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                {t('services.modern.brand')}
-              </p>
-
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                {t('services.modern.approach')}
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                Modern tasarım, kullanıcı deneyimini ön planda tutan, sade ve işlevsel bir yaklaşımı benimser. Minimalist öğeler, dengeli renk paletleri ve kullanıcı dostu arayüzler ile dijital varlığınızı güçlendiriyoruz. Her proje, markanızın özgün kimliğini yansıtacak şekilde özenle tasarlanır.
               </p>
             </div>
           </div>
