@@ -33,12 +33,12 @@ const WebDesignService = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <img
               src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
-              alt={t('services.webdesign.image1Alt')}
+              alt="Modern Web Design"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />
             <img
               src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
-              alt={t('services.webdesign.image2Alt')}
+              alt="Web Development Setup"
               className="rounded-lg shadow-lg w-full h-64 object-cover"
             />
           </div>
@@ -50,54 +50,48 @@ const WebDesignService = () => {
           <div className="relative mb-12">
             <img
               src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
-              alt={t('services.webdesign.image3Alt')}
+              alt="Modern Web Design Process"
               className="rounded-lg shadow-lg w-full h-48 object-cover"
             />
           </div>
 
-          <h2 className="text-2xl font-semibold mb-4">
-            {t('services.webdesign.features.title')}
-          </h2>
+          <h2 className="text-2xl font-semibold mb-4">Teknik Özellikler</h2>
           <ul className="list-disc pl-6 mb-8">
-            <li>{t('services.webdesign.features.responsive')}</li>
-            <li>{t('services.webdesign.features.seo')}</li>
-            <li>{t('services.webdesign.features.performance')}</li>
-            <li>{t('services.webdesign.features.ui')}</li>
-            <li>{t('services.webdesign.features.browser')}</li>
+            <li>Responsive Tasarım - Tüm cihazlarda mükemmel görünüm</li>
+            <li>SEO Dostu Yapı - Arama motorlarında üst sıralarda yer alın</li>
+            <li>Hızlı Yükleme Süreleri - Optimize edilmiş performans</li>
+            <li>Modern UI/UX - Kullanıcı dostu arayüzler</li>
+            <li>Cross-Browser Uyumluluk - Tüm tarayıcılarda sorunsuz çalışma</li>
           </ul>
 
           <div className="relative mb-12">
             <img
               src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
-              alt={t('services.webdesign.image4Alt')}
+              alt="User Experience Design"
               className="rounded-lg shadow-lg w-full h-48 object-cover"
             />
           </div>
 
-          <h2 className="text-2xl font-semibold mb-4">
-            {t('services.webdesign.process.title')}
-          </h2>
+          <h2 className="text-2xl font-semibold mb-4">Tasarım Sürecimiz</h2>
           <ol className="list-decimal pl-6 mb-8">
-            <li>{t('services.webdesign.process.step1')}</li>
-            <li>{t('services.webdesign.process.step2')}</li>
-            <li>{t('services.webdesign.process.step3')}</li>
-            <li>{t('services.webdesign.process.step4')}</li>
-            <li>{t('services.webdesign.process.step5')}</li>
-            <li>{t('services.webdesign.process.step6')}</li>
+            <li>İhtiyaç Analizi ve Planlama</li>
+            <li>Wireframe ve Prototip Oluşturma</li>
+            <li>Görsel Tasarım ve UI Geliştirme</li>
+            <li>Responsive Tasarım Uygulaması</li>
+            <li>Test ve Optimizasyon</li>
+            <li>Lansman ve Destek</li>
           </ol>
 
           <div className="bg-primary/5 p-8 rounded-lg mt-12">
-            <h3 className="text-xl font-semibold mb-4">
-              {t('services.webdesign.consultation.title')}
-            </h3>
+            <h3 className="text-xl font-semibold mb-4">Ücretsiz Danışmanlık</h3>
             <p className="mb-4">
-              {t('services.webdesign.consultation.description')}
+              Projeniz için en uygun çözümü birlikte belirleyelim. Hemen iletişime geçin!
             </p>
             <Button 
               onClick={handleContactClick}
               className="bg-primary hover:bg-primary/90"
             >
-              {t('services.webdesign.consultation.cta')}
+              İletişime Geçin
             </Button>
           </div>
         </div>
