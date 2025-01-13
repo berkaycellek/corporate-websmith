@@ -13,6 +13,15 @@ const ModernDesign = () => {
       <Navbar />
       <div className="py-12">
         <div className="container mx-auto px-4">
+          <Button 
+            variant="ghost" 
+            onClick={() => navigate(-1)}
+            className="mb-16"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            {t('common.back')}
+          </Button>
+
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               <img 
@@ -32,17 +41,6 @@ const ModernDesign = () => {
                 {t('services.modern.description')}
               </p>
             </div>
-          </div>
-
-          <div className="mt-16 flex justify-center">
-            <Button 
-              variant="ghost" 
-              onClick={() => navigate(-1)}
-              className="hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            >
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              {t('common.back')}
-            </Button>
           </div>
         </div>
       </div>
