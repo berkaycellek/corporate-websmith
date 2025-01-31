@@ -17,10 +17,27 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Create mailto link with form data
+    const subject = `Contact from ${formData.name}`;
+    const body = `
+Name: ${formData.name}
+Email: ${formData.email}
+
+Message:
+${formData.message}
+    `;
+    
+    // Open default email client
+    window.location.href = `mailto:berkaycellek08@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Show success toast
     toast({
       title: t('contact.toast.title'),
       description: t('contact.toast.description'),
     });
+    
+    // Reset form
     setFormData({ name: "", email: "", message: "" });
   };
 
