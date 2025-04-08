@@ -17,6 +17,12 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const subject = `İletişim Formu - ${formData.name}`;
+    const body = `İsim: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMesaj:%0D%0A${formData.message}`;
+    
+    window.location.href = `mailto:berkaycellek08@gmail.com?subject=${subject}&body=${body}`;
+    
     toast({
       title: t('contact.toast.title'),
       description: t('contact.toast.description'),

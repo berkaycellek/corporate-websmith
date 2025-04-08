@@ -9,7 +9,13 @@ const WebDesignService = () => {
   const navigate = useNavigate();
 
   const handleContactClick = () => {
-    navigate('/#contact');
+    navigate('/');
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   return (
